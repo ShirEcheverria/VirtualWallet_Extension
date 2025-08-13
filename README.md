@@ -1,6 +1,8 @@
 # 💰 Virtual Wallet Currency – Chrome Extension
 
-![Extension Icon](images/icon128.png)
+<img width="128" height="128" alt="icon16" src="https://github.com/user-attachments/assets/1c8cb70d-2caf-41ab-a304-8d7b83b4f476" />
+
+
 
 **Virtual Wallet Currency** is a lightweight and intuitive Chrome extension for managing and tracking cryptocurrency balances in real-time.  
 The extension provides an interactive dashboard with **portfolio distribution charts**, **BTC/ETH/LTC balance tracking**, and **live exchange rates** for an enhanced digital wallet experience.
