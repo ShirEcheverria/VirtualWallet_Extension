@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Virtual Currency Manager",
+  "version": "1.0",
+  "description": "Manage your BTC and ETH. Track your balance, history, and see live charts.",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Open Virtual Wallet"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "https://cex.io/*",
+    "https://api.coinbase.com/*"
+  ]
+}

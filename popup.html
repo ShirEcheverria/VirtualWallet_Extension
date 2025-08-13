@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Currency Manager</title>
+
+    <!-- External stylesheet for styling the extension -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- D3.js library for chart visualization -->
+    <script src="d3.min.js"></script>
+
+    <!-- Scroll fix for popup height control -->
+    <style>
+        body {
+            max-height: var(--popup-max-height);
+            overflow-y: auto;
+        }
+
+        #main-container, #chart-container {
+            max-height: var(--popup-max-height);
+            overflow-y: auto;
+        }
+
+        /*  styles for the Open Chart button */
+        #open-chart {
+            background-color: #5C9DC3; /* Soft blue color for neutrality and action indication */
+            color: #ffffff; /* White text for contrast */
+            border: none; /* Remove border for cleaner design */
+            padding: 10px 15px;
+            font-size: 14px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-bottom: 20px; /* Add some space below the button */
+        }
+
+        #open-chart:hover {
+            background-color: #4A7F96; /* Slightly darker blue on hover for interactivity */
+        }
+    </style>
+
+</head>
+
+<body>
+
+<!-- === Tab Navigation Buttons (Wallet / Chart) === -->
+<div id="tabs">
+    <button class="tab-button active" data-tab="wallet-tab">Wallet</button>
+    <button class="tab-button" data-tab="summary-tab">Chart</button>
+</div>
+
+<!-- === Wallet Tab Section === -->
+<div class="tab-content active" id="wallet-tab">
+    <div class="container">
+        <h1>Virtual Currency Wallet</h1>
+
+        <!-- Section showing live balances of BTC and ETH -->
+        <div id="wallet-balance">
+            BTC: 0 <br>ETH: 0
+        </div>
+
+        <!-- Dropdown to select which currency to modify -->
+        <label for="currency">Select Currency:</label>
+        <select id="currency">
+            <option value="BTC">Bitcoin (BTC)</option>
+            <option value="ETH">Ethereum (ETH)</option>
+        </select>
+
+        <!-- Input field for amount to add/remove/convert -->
+        <label for="amount">Amount:</label>
+        <input type="number" id="amount" placeholder="Enter amount" step="0.01" style="width: 100%; max-width: 250px; padding: 8px 10px; font-size: 14px; margin-top: 5px; margin-bottom: 15px;">
+
+        <!-- Main wallet action buttons -->
+        <button id="add">Add to Wallet</button>
+        <button id="remove">Remove from Wallet</button>
+        <button id="check">Check This Amount (USD)</button>
+        <button id="check-total">Check Wallet Total (USD)</button>
+
+        <!-- Transaction history section -->
+        <h3>Recent Transactions</h3>
+        <div id="history"></div>
+    </div>
+</div>
+
+<!-- === Chart Tab Section === -->
+<div class="tab-content" id="summary-tab">
+    <div id="chart-container" style="display: block;">
+        <!-- Area where D3 line chart will be rendered -->
+        <div id="chart-area"></div>
+
+        <!-- Visual separator between line and pie charts -->
+        <hr style="margin: 5px auto; width: 80%; border: 1px solid #ccc;">
+
+        <!-- Title and color indicators for the pie chart -->
+        <p style="text-align:center; font-weight:bold; margin-top:10px;">
+            Cryptocurrency Breakdown:
+            <span style="color:orange;">●</span> BTC and <span style="color:purple;">●</span> ETH
+        </p>
+
+        <!-- Canvas for pie chart showing BTC vs ETH proportion -->
+        <canvas id="pieChart" width="240" height="240" style="margin-top: 20px;"></canvas>
+    </div>
+</div>
+
+<!-- === Main logic script files === -->
+<script src="dao.js"></script>          <!-- Data access functions -->
+<script src="service.js"></script>      <!-- Price lookup and utilities -->
+<script src="chart.js"></script>        <!-- Pie chart rendering logic -->
+<script src="popup.js"></script>        <!-- Main wallet + chart functionality -->
+
+</body>
+
+</html>

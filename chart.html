@@ -1,0 +1,32 @@
+<!-- chart.html - Displays the transaction history chart for BTC & ETH -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wallet History - BTC &amp; ETH</title>
+
+    <!-- Load D3.js for chart rendering (local file) -->
+    <script src="d3.min.js"></script>
+
+    <!-- Load service.js to fetch live USD prices -->
+    <script src="service.js"></script>
+
+    <!-- Load dao.js for data access and transaction history -->
+    <script src="dao.js"></script>
+
+    <!-- Load stylesheet for consistent layout and design -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- === Page Title === -->
+    <h2>Wallet History</h2>
+
+    <!-- === Chart Container === -->
+    <div id="chart"></div>
+
+    <!-- === Chart Rendering Logic === -->
+    <script src="chart.js"></script>
+</body>
+</html>
