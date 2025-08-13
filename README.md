@@ -18,6 +18,7 @@ The extension provides an interactive dashboard with **portfolio distribution ch
 
 ## 🛠 Technologies Used
 - **Languages:** JavaScript, HTML5, CSS3
+- node.js
 - **Libraries & Tools:**
   - [D3.js](https://d3js.org/) – For data visualization and charts.
   - Chrome Extensions API
@@ -25,17 +26,20 @@ The extension provides an interactive dashboard with **portfolio distribution ch
 
 ---
 ## 🖼️ Screenshots
-<img width="443" height="266" alt="Screenshot 2025-08-13 115323" src="https://github.com/user-attachments/assets/41164c59-f5f6-4662-9f4d-9dcd6f9b2f0c" />
+-Loading the Unpacked Extension (Developer Mode)
+
+<img width="443" height="266" alt="Screenshot 2025-08-13 115323" src="https://github.com/user-attachments/assets/66f7b3fc-923e-49ce-9e73-197effafe661" />
+
+-Wallet Tab View — Virtual Wallet Balance & Transactions
+
+<img width="446" height="661" alt="Screenshot 2025-08-13 115334" src="https://github.com/user-attachments/assets/fcae6d1d-2e73-4e51-b0d8-7e372c2d69b9" />
+
+-Chart  View 
+
+<img width="469" height="620" alt="Screenshot 2025-08-13 115431" src="https://github.com/user-attachments/assets/1583d543-75e2-4077-a6a3-e69f5ec171dd" />
 
 
-<img width="446" height="661" alt="Screenshot 2025-08-13 115334" src="https://github.com/user-attachments/assets/a93dcf3b-77ec-4c83-b43f-4b5f9f840510" />
-
-
-<img width="469" height="620" alt="Screenshot 2025-08-13 115431" src="https://github.com/user-attachments/assets/3ca028a0-fb9b-4c3b-be01-761ed40c64a1" />
-
-
-<img width="422" height="614" alt="Screenshot 2025-08-13 115455" src="https://github.com/user-attachments/assets/7efec126-61d3-4139-98dc-cb90ac0bf51a" />
-
+<img width="422" height="614" alt="Screenshot 2025-08-13 115455" src="https://github.com/user-attachments/assets/ec218071-9da4-4576-85fd-fc36dd7098ab" />
 
 ---
 ## 📦 Installation
